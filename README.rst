@@ -1,9 +1,12 @@
 feature-grouper
 ===============
 
-Hierarchical clustering-based dimensionality reduction.
+Simple, hierarchical clustering-based dimensionality reduction.
 
-Calculates correlation matrix of all features in X, applies hierarchical
+Calculates a correlation matrix of all features in X, applies hierarchical
 clustering to create flat clusters of highly correlated features,
 then generates and applies a loading matrix that evenly weights the input
 features within each cluster.
+
+Use as a simplified alternative to dimensionality reduction methods like PCA
+when you need highly interpretable loadings.
