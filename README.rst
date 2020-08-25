@@ -3,6 +3,9 @@ feature-grouper
 
 .. image:: https://badge.fury.io/py/feature-grouper.svg
     :target: https://badge.fury.io/py/feature-grouper
+.. image:: https://readthedocs.org/projects/feature-grouper/badge/?version=latest
+    :target: https://feature-grouper.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
 
 Simple, hierarchical clustering-based dimensionality reduction.
 
