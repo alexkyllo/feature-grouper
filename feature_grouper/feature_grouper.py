@@ -18,7 +18,7 @@ def cluster(X, threshold=0.5):
     :param X: array-like, shape (n_samples, n_features)
                New data, where n_samples is the number of samples
                and n_features is the number of features.
-    :param threshold: The minimum correlation similarity threshold to group
+    :param threshold: float The minimum correlation similarity threshold to group
            descendants of a cluster node into the same flat cluster.
     """
     dissim = 1.0 - np.corrcoef(X.T)
@@ -32,7 +32,8 @@ def make_loadings(labels, threshold=0.5):
     Generate a loading matrix from the feature cluster labels, given
     a minimum correlation similarity threshold.
 
-    Apply the loading matrix to the original data with ``np.matmul``.
+    Apply the loading matrix to the original data with ``np.matmul``
+    or the ``@`` operator.
 
     :Example:
 
@@ -43,9 +44,10 @@ def make_loadings(labels, threshold=0.5):
     >>> loading_matrix = feature_grouper.make_loading_matrix(clusters, threshold)
     >>> X_transformed = X @ loading_matrix
 
-    :param labels: A numpy 1d array containing the cluster number label
+    :param labels: array-like, shape (n,)
+           A numpy 1d array containing the cluster number label
            for each column in the original dataset.
-    :param threshold: The minimum correlation similarity threshold that was
+    :param threshold: float The minimum correlation similarity threshold that was
            used to cluster the features.
     """
     label_counts = Counter(labels)
@@ -72,9 +74,14 @@ class FeatureGrouper(BaseEstimator, TransformerMixin):
 
     Input features should be normalized (i.e. z-scores).
 
-    :param threshold: The minimum correlation similarity threshold to group
+    :param threshold: float The minimum correlation similarity threshold to group
            descendants of a cluster node into the same flat cluster.
-    :param copy: If False, data passed to transform are overwritten.
+    :param copy: bool If False, data passed to transform are overwritten.
+    :ivar components\_: array, shape (n_components, n_features)
+          The loading matrix obtained from clustering and weighting
+          correlated features.
+    :ivar n_components\_: int The number of components that were estimated
+          from the data.
     """
 
     def __init__(self, threshold=0.5, copy=True):
