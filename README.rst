@@ -1,6 +1,9 @@
 feature-grouper
 ===============
 
+.. image:: https://badge.fury.io/py/feature-grouper.svg
+    :target: https://badge.fury.io/py/feature-grouper
+
 Simple, hierarchical clustering-based dimensionality reduction.
 
 Calculates a correlation matrix of all features in X, applies hierarchical
