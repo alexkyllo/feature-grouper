@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "feature-grouper"
 version = "0.1.0"
-description = ""
+description = "Simple dimensionality reduction through hierarchical clustering of correlated features."
 authors = ["Alex Kyllo <alex.kyllo@gmail.com>"]
 
 [tool.poetry.dependencies]
