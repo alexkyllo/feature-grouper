@@ -1,11 +1,13 @@
 [tool.poetry]
 name = "feature-grouper"
-version = "0.1.0"
+version = "0.1.1"
 description = "Simple dimensionality reduction through hierarchical clustering of correlated features."
 authors = ["Alex Kyllo <alex.kyllo@gmail.com>"]
+homepage = "https://feature-grouper.readthedocs.io/en/latest/"
+repository = "https://github.com/alexkyllo/feature-grouper"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 scipy = "^1.5.2"
 numpy = "^1.19.1"
 scikit-learn = "^0.23.2"
