@@ -16,3 +16,8 @@ features within each cluster.
 
 Use as a simplified alternative to dimensionality reduction methods like PCA
 when you need highly interpretable loadings.
+
+Installing
+----------
+
+``pip install feature-grouper``
